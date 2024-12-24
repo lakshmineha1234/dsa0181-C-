@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+class StringCaseConverter{
+	private:
+		string inputString;
+		
+    public:
+    	StringCaseConverter(const string& str): inputString(str){}
+    	string toUpperCase(){
+    		string upperCaseString = inputString;
+    		transform(upperCaseString.begin(), upperCaseString.end(), upperCaseString.begin(), ::toupper);
+    		return upperCaseString;    		
+		}
+		string toLowerCase(){
+			string lowerCaseString = inputString;
+			transform(lowerCaseString.begin(), lowerCaseString.end(), lowerCaseString.begin(), ::tolower);
+			return lowerCaseString;
+		}
+};
+
+int main(){
+	string input;
+	cout<< "Enter the String:";
+	getline(cin, input);
+	
+	StringCaseConverter converter(input);
+	cout<< "The string in upper case:"<< converter.toUpperCase();
+	cout<< "\nThe string in lower case:"<< converter.toLowerCase();
+	return 0;
+}
