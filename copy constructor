@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+class Book{
+	string title;
+	double price;
+	public:
+		Book(string t, double p): title(t),price(p){}
+		Book(const Book &b){
+			title = b.title;
+			price = b.price;
+		}
+		void display(){
+			cout<<"Title:"<<title<<"Price:"<<price;
+	    }
+};
+
+int main(){
+	Book book1("C++ Programming",499.99);
+	Book book2 = book1;
+	book1.display();
+	book2.display();
+	return 0;
+}
