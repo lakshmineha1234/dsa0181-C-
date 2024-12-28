@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+class Circle{
+	double radius;
+	public:
+		Circle(){
+			radius = 1.0;
+		}
+		Circle(double r){
+			radius = r;
+		}
+		double area(){
+			return 3.14159*radius*radius;
+		}
+};
+int main(){
+	Circle c1;
+	Circle c2(5.0);
+	cout<<"Default Circle Area:"<<c1.area();
+	cout<<"Circle with Radius 5.0 Area:"<<c2.area();
+	return 0;
+}
