@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+class Student{
+	int id;
+	string name;
+	
+	public:
+		student(){
+			id = 0;
+			name = "Unknown";
+		}
+		void display(){
+			cout<<"ID: "<<id<<",Name:"<<name;
+		}
+};
+int main(){
+	Student s;
+	s.display();
+	return 0;
+}
